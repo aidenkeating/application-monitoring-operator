@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   labels:
-    monitoring-key: 'middleware'
+    monitoring-key: {{ .MonitoringKey }}
   name: {{ .PrometheusServiceMonitorName }}
   namespace: {{ .Namespace }}
 spec:
