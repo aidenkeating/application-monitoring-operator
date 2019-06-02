@@ -15,7 +15,7 @@ spec:
       serviceAccountName: application-monitoring-operator
       containers:
         - name: application-monitoring-operator
-          image: quay.io/integreatly/application-monitoring-operator:0.0.5
+          image: docker.io/aidenkeatingrht/application-monitoring-operator:0.0.5-monitoring-key
           ports:
             - containerPort: 60000
               name: metrics
@@ -34,7 +34,7 @@ spec:
             - name: TEMPLATE_PATH
               value: /usr/local/bin/templates
             - name: MONITORING_KEY
-              value: middleware
+              value: emergency-response
             - name: WATCH_NAMESPACE
               valueFrom:
                 fieldRef:
